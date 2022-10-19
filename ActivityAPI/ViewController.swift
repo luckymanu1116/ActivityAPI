@@ -14,6 +14,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func catfacts(_ sender: UIButton) {
+        
+        let url = "https://meowfacts.herokuapp.com/?count=3"
+        
+        APIDataFetch().fetchData(url: url)
+    }
+    
+    @IBAction func anime(_ sender: UIButton) {
+        
+        let url = "https://anime-facts-rest-api.herokuapp.com/api/v1"
+        
+        APIDataFetch().fetchData(url: url)
+    }
+    
+    @IBAction func emoji(_ sender: UIButton) {
+        
+        let url = "https://emojihub.herokuapp.com/api/random"
+        
+        APIDataFetch().fetchData(url: url)
+    }
+    
+    
 }
 
